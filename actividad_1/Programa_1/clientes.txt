@@ -1,0 +1,10 @@
+Alice;100
+Maria;200
+Alice;950
+Bob;150
+Felipe;500
+Bob;700
+Alice;300
+Carol;200
+Felipe;400
+Maria;900
