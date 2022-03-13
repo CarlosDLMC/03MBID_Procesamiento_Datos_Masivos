@@ -16,18 +16,18 @@ for claveValor in sys.stdin:
     if subproblema == None:
         subproblema = cliente
 
-    if subproblema == cliente:
-	tiendas.add(tienda)	
+	if subproblema == cliente:
+		tiendas.add(tienda)
 
     else:
-	if len(tiendas) >= 3:	
-		for numTiendaVisitada in range(0, 3, 1):
-			tiendaVisitada = tiendas.pop()
-			print("%s\t%s" % (subproblema, tiendaVisitada))
+		if len(tiendas) >= 3:
+			for numTiendaVisitada in range(0, 3, 1):
+				tiendaVisitada = tiendas.pop()
+				print("%s\t%s" % (subproblema, tiendaVisitada))
 
-        subproblema = cliente
-	tiendas = set()
-	tiendas.add(tienda)
+		subproblema = cliente
+		tiendas = set()
+		tiendas.add(tienda)
 
 
 if len(tiendas) >= 3:	

@@ -17,20 +17,19 @@ for claveValor in sys.stdin:
 
     if subproblema == None:
         subproblema = cliente
-	gastoMasFrecuente = gasto
-	conteoGastoMasFrecuente = conteo
+        gastoMasFrecuente = gasto
+        conteoGastoMasFrecuente = conteo
 
     if subproblema == cliente:
-	if conteo > conteoGastoMasFrecuente:
-		gastoMasFrecuente = gasto
-		conteoGastoMasFrecuente = conteo	
+        if conteo > conteoGastoMasFrecuente:
+            gastoMasFrecuente = gasto
+            conteoGastoMasFrecuente = conteo
 
     else:
-	print("%s\t%s" % (subproblema, gastoMasFrecuente))
-
+        print("%s\t%s" % (subproblema, gastoMasFrecuente))
         subproblema = cliente
-	gastoMasFrecuente = gasto
-	conteoGastoMasFrecuente = conteo
+        gastoMasFrecuente = gasto
+        conteoGastoMasFrecuente = conteo
 
 
 print("%s\t%s" % (subproblema, gastoMasFrecuente))

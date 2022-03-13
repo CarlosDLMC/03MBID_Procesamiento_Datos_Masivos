@@ -16,23 +16,21 @@ for claveValor in sys.stdin:
     if subproblema == None:
         subproblema = cliente
 
-
     if subproblema == cliente:
-	if gasto not in conteoGastos:
-		conteoGastos[gasto] = 0	
-	conteoGasto = int(conteoGastos[gasto]) + int(conteo)
-	conteoGastos.update({gasto:conteoGasto})
-	
+        if gasto not in conteoGastos:
+            conteoGastos[gasto] = 0
+        conteoGasto = int(conteoGastos[gasto]) + int(conteo)
+        conteoGastos.update({gasto:conteoGasto})
 
     else:	
-	for gasto in conteoGastos:
-		gastoCliente = conteoGastos[gasto]
-		print("%s\t%s\t%s" % (subproblema, gasto, gastoCliente))
-        
+        for gasto in conteoGastos:
+            gastoCliente = conteoGastos[gasto]
+            print("%s\t%s\t%s" % (subproblema, gasto, gastoCliente))
+
         subproblema = cliente
-	conteoGastos = {gasto:conteo}
+        conteoGastos = {gasto:conteo}
 
 
 for gasto in conteoGastos:
-	gastoCliente = conteoGastos[gasto]
-	print("%s\t%s\t%s" % (subproblema, gasto, gastoCliente))
+    gastoCliente = conteoGastos[gasto]
+    print("%s\t%s\t%s" % (subproblema, gasto, gastoCliente))
